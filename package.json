@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "set NODE_ENV=development&& ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts",
-    "build": "npx tsc",
+    "build": "yarn add typescript && tsc",
     "start": "node dist/server.js"
   }
 }
