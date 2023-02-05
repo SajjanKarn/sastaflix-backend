@@ -41,6 +41,11 @@ streamRouter.get("/:hash/:name", (req: Request, res: Response) => {
 
     res.setHeader("Content-Type", "video/mp4");
     stream.pipe(res);
+
+    // end the stream if the client disconnects
+    res.on("close", () => {
+      stream.destroy();
+    });
   });
 });
 
