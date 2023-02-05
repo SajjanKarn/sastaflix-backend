@@ -1,10 +1,12 @@
 import express, { Application } from "express";
 import morgan from "morgan";
+import cors from "cors";
 
 import streamRouter from "./routes/stream";
 
 const app: Application = express();
 
+app.use(cors());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("tiny"));
 }
