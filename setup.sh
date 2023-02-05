@@ -1,5 +1,4 @@
 apt update && apt upgrade -y
-pkg install git -y
 pkg install nodejs -y
 pkg install yarn -y
 
